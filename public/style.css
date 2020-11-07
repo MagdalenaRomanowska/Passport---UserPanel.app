@@ -46,6 +46,11 @@ textarea {
   display: block;
 }
 
+.welcome {
+  font-size: 32px;
+  color: white;
+}
+
 button {
   background: #0064e7;
   border: none;
@@ -150,6 +155,21 @@ button {
 .loginBtn--google:focus {
   background: #E74B37;
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+}
+
+.logOut {
+  font-size: 18px;
+  color: white;
+}
+
+.avatar {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @-webkit-keyframes fadeIn {

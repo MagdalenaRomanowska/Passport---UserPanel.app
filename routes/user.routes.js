@@ -4,11 +4,12 @@ const passport = require('passport');
 
 router.get('/logged', (req, res) => {
     if (req.user !== undefined) {
-        res.render('logged');
+        console.log('req.user:', req.user);
+        res.render('logged', {name: req.user.displayName, avatar: req.user.photos[0].value});
     } else {
         res.render('noPermission');
     }
-    console.log('req.user:', req.user);
+    
 });
 
 router.get('/no-permission', (req, res) => {
@@ -31,6 +32,10 @@ router.get('/profile/settings', (req, res) => {
         res.render('noPermission');
     }
     console.log('req.user:', req.user);
+});
+
+router.get('/auth.logout', (req, res) => {
+    res.render('logOut');
 });
 
 module.exports = router;
