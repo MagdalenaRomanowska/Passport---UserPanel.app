@@ -10,4 +10,11 @@ or
 ```javascript
 npm start 
 ```
-and adding file: nodemon.json.
+and adding file: nodemon.json like:
+{
+  "env": {
+    "clientID": "yourClientID",
+    "clientSecret": "yourClientSecret",
+    "callbackURL": "http://localhost:8000/auth/google/callback"
+  }
+}
